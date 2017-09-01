@@ -57,6 +57,14 @@ app.get('/about',(req,res)=>{
   });
 });;
 
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle: 'Projects page',
+    projectList: 'Here you will find the links to all the Projects',
+    currentYear : new Date().getFullYear()
+  });
+});;
+
 app.get('/bad',(req,res)=>{
   // res.send('<h1>Hello Express<h1>');
   res.send({
